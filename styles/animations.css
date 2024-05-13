@@ -1,14 +1,184 @@
-/* Опишите в этом файле все keyframes для проекта и стили анимаций иконки Like.
+.theme-menu__button:disabled::before {
+  content: "▶";
+  display: inline-block;
+  animation: arrow-shift 0.5s ease-in-out infinite alternate;
+}
 
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ theme-dark — класс тёмной темы
-✦ theme-light — класс светлой темы
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
+.theme-menu__button:hover {
+  animation: opacity-changer 0.3s ease forwards;
+}
 
-Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
-*/
+.theme-menu__button:disabled {
+  animation: opacity-changer 0.3s ease forwards;
+  pointer-events: none;
+}
+
+.theme-menu__button::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 2px;
+  margin-top: 2px;
+  background-color: currentColor;
+  transition: width 0.3s;
+}
+
+.theme-menu__button:focus::after {
+  content: '';
+  width: 100%;
+}
+
+@keyframes arrow-shift {
+  0% {
+    translate: 0px;
+  }
+  100% {
+    translate: 4px;
+  }
+}
+
+@keyframes opacity-changer {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+} 
+
+.card__like-button:focus {
+  box-shadow: 2px 2px 0px var(--accent-color);
+  outline: none;
+  transition: box-shadow 0.3s;
+}
+
+.card__like-button:focus-visible {
+  box-shadow: 2px 2px 0px var(--accent-color);
+  outline: none;
+  transition: box-shadow 0.3s;
+}
+
+.card__like-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-color);
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(-100%);
+}
+
+.card__like-button:hover::before {
+  transform: translateX(0);
+}
+
+.like-icon .core {
+  fill: transparent;
+  transition: fill 0.3s 0.03s linear;
+}
+
+.like-icon:hover .core {
+  fill: var(--accent-color);
+  transition: fill 0.3s linear;
+}
+
+.like-icon:active .core {
+  fill: var(--heart-color);
+  transition: fill 0.3s linear;
+}
+
+.like-icon .main-body {
+  fill: transparent;
+  transition: fill 0.3s linear;
+}
+
+.like-icon:hover .main-body {
+  fill: var(--accent-color);
+  transition: fill 0.3s 0.05s linear;
+}
+
+.like-icon:active .main-body {
+  fill: var(--heart-color);
+  transition: fill 0.3s 0.05s linear;
+}
+
+.like-icon.is-liked .core {
+  fill: var(--heart-color);
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--heart-color);
+  transition: fill 0.3s 0.05s linear;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--heart-color);
+  transition: fill 0.3s 0.06s linear;
+}
+
+.like-icon.is-liked .heart {
+  transform-origin: center center;
+  animation: scaleheart 0.3s ease-in 0.1s 1 alternate none;
+}
+
+.like-icon .contour {
+  fill: var(--accent-color);
+  transition: fill 0.1s linear;
+}
+
+@keyframes scaleheart {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 1.5;
+  }
+}
+
+.like-icon.is-liked .sparks {
+  animation: sparks 0.3s ease-in 0.3s 1 alternate none;
+}
+
+@keyframes sparks {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.save__button:focus {
+  box-shadow: 2px 2px 0px var(--accent-color);
+  outline: none;
+  transition: box-shadow 0.3s;
+}
+
+.save__button:focus-visible {
+  box-shadow: 2px 2px 0px var(--accent-color);
+  outline: none;
+  transition: box-shadow 0.3s;
+}
+
+.save__button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-color);
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(-100%);
+}
+
+.save__button:hover::before {
+  transform: translateX(0);
+}

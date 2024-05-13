@@ -1,1 +1,33 @@
-/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --font-family__main: 'Inter', sans-serif;
+  --font-family__accent: 'PressStart2P', fantasy;
+  --font-weight__text: 400;
+  --font-weight__title: 700;
+  --bg-color: #fff;
+  --accent-color: #000;
+  --gradient-color__first: #d3d3d3;
+  --gradient-color__second: #e7e7e7;
+  --gradient-color__third: #1a1a1a;
+  --bg-image:
+    repeating-linear-gradient(to bottom,
+    var(--gradient-color__first),
+    var(--gradient-color__first) 2px,
+    transparent 2px,
+    transparent 4px),
+    repeating-linear-gradient(to right,
+    var(--gradient-color__first),
+    var(--gradient-color__first) 2px,
+    transparent 2px,
+    transparent 4px),
+    linear-gradient(to bottom,
+    var(--gradient-color__second) 0.01%,
+    var(--gradient-color__third));
+  --text-shadow-color: #fff;
+  --card__width: clamp(23.438rem, 30.141vw + 16.373rem, 43.5rem);
+  --font-size__title-L: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  --font-size__title-M: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  --font-size__title-S: 14px;
+  --font-size__text: 18px;
+  --contour-color: #000;
+  --heart-color: #ff0000;
+}
