@@ -59,7 +59,7 @@
     --gradient-color__first: #000;
     --gradient-color__second: #007f0c;
     --gradient-color__third: #004306;
-    --bg-image: repeating-linear-gradient(to bottom, var(--gradient-color__first), var(--gradient-color__first) 2px, transparent 2px, transparent 4px), repeating-linear-gradient(to right, var(--gradient-color__first), var(--gradient-color__first) 2px, transparent 2px, transparent 4px); linear-gradient(to bottom, var(--gradient-color__second) 0.01%, var(--gradient-color__third));
+    --bg-image: repeating-linear-gradient(to bottom, var(--gradient-color__first), var(--gradient-color__first) 2px, transparent 2px, transparent 4px), repeating-linear-gradient(to right, var(--gradient-color__first), var(--gradient-color__first) 2px, transparent 2px, transparent 4px), linear-gradient(to bottom, var(--gradient-color__second) 0.01%, var(--gradient-color__third));
     --text-shadow-color: #000;
     --card__width: clamp(23.438rem, 30.141vw + 16.373rem, 43.5rem);
     --font-size__title-L: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);

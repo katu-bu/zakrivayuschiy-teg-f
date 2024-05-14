@@ -23,8 +23,8 @@
   <body class="page">
     <header class="header">
       <div class="header__heading">
-        <h1 class="header__title">&lt/html&gt</h1>
-        <h2 class="header__subtitle">закрывающий тег</h2>
+        <a class="header__link">&lt;/html&gt;</a>
+        <h1 class="header__title">закрывающий тег</h1>
       </div>
       <nav class="theme-menu header__theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
@@ -52,13 +52,13 @@
       </nav>
     </header>
     <main class="main-content">
-      <section class="card">
+      <article class="card">
         <h3 class="card__title">
           Фритрек и нулевой спринт: Подготовка к работе
         </h3>
-        <div class="position__label">
+        <div class="card__label-position">
           <img
-            class="card__image card__image-rocket"
+            class="card__image card__image_strt40brght130cntr150"
             src="./images/image-rocket.png"
             alt="ракета"/>
           <label class="card__label"> Поехали! </label>
@@ -72,7 +72,7 @@
           <p>Сколько всего интересного впереди!</p>
         </div>
         <div class="card__like-position">
-          <button class="card__icon-button">
+          <button type="button" class="card__icon-button" aria-labelledby="like">
             <svg
               width="39"
               height="36"
@@ -100,16 +100,16 @@
                 class="sparks"/>
             </svg>
           </button>
-          <button class="card__like-button">
+          <button id="like" type="button" class="button card__like-button">
             <span class="button__text"> like </span>
           </button>
         </div>
-      </section>
-      <section class="card">
+      </article>
+      <article class="card">
         <h3 class="card__title">1 спринт: Я — чистый лист</h3>
-        <div class="position__label">
+        <div class="card__label-position">
           <img
-            class="card__image card__image-start"
+            class="card__image card__image_sp60brght80"
             src="./images/image-start.png"
             alt="старт"/>
           <label class="card__label"> Начало </label>
@@ -125,7 +125,7 @@
           <p>Будет сложно, но мы справимся. Hello world</p>
         </div>
         <div class="card__like-position">
-          <button class="card__icon-button">
+          <button type="button" class="card__icon-button" aria-labelledby="like">
             <svg
               width="39"
               height="36"
@@ -153,16 +153,16 @@
                 class="sparks"/>
             </svg>
           </button>
-          <button class="card__like-button">
+          <button id="like" type="button" class="button card__like-button">
             <span class="button__text"> like </span>
           </button>
         </div>
-      </section>
-      <section class="card">
+      </article>
+      <article class="card">
         <h3 class="card__title">1 спринт: А если не получится?</h3>
-        <div class="position__label">
+        <div class="card__label-position">
           <img
-            class="card__image card__image-success"
+            class="card__image card__image_strt500"
             src="./images/image-success.png"
             alt="успех"/>
           <label class="card__label"> Ого </label>
@@ -176,7 +176,7 @@
           <p>Вау, неужели я так могу!</p>
         </div>
         <div class="card__like-position">
-          <button class="card__icon-button">
+          <button type="button" class="card__icon-button" aria-labelledby="like">
             <svg
               width="39"
               height="36"
@@ -204,16 +204,16 @@
                 class="sparks"/>
             </svg>
           </button>
-          <button class="card__like-button">
+          <button id="like" type="button" class="button card__like-button">
             <span class="button__text"> like </span>
           </button>
         </div>
-      </section>
-      <section class="card">
+      </article>
+      <article class="card">
         <h3 class="card__title">2 спринт: Погоня за идеалом</h3>
-        <div class="position__label">
+        <div class="card__label-position">
           <img
-            class="card__image card__image-ideal"
+            class="card__image card__image_inv1"
             src="./images/image-ideal.png"
             alt="идеал"/>
           <label class="card__label"> Идеал </label>
@@ -229,7 +229,7 @@
           <p>Нужно. Сделать. Идеально!</p>
         </div>
         <div class="card__like-position">
-          <button class="card__icon-button">
+          <button type="button" class="card__icon-button" aria-labelledby="like">
             <svg
               width="39"
               height="36"
@@ -257,16 +257,16 @@
                 class="sparks"/>
             </svg>
           </button>
-          <button class="card__like-button">
+          <button id="like" type="button" class="button card__like-button">
             <span class="button__text"> like </span>
           </button>
         </div>
-      </section>
-      <section class="card">
+      </article>
+      <article class="card">
         <h3 class="card__title">2 спринт: О тех, кто рядом</h3>
-        <div class="position__label">
+        <div class="card__label-position">
           <img
-            class="card__image card__image-help"
+            class="card__image card__image_brght90hue10"
             src="./images/image-help.png"
             alt="помощь"/>
           <label class="card__label"> Need help </label>
@@ -283,7 +283,7 @@
           <p>Жду на помощь супергероя.</p>
         </div>
         <div class="card__like-position">
-          <button class="card__icon-button">
+          <button type="button" class="card__icon-button" aria-labelledby="like">
             <svg
               width="39"
               height="36"
@@ -311,16 +311,16 @@
                 class="sparks"/>
             </svg>
           </button>
-          <button class="card__like-button">
+          <button id="like" type="button" class="button card__like-button">
             <span class="button__text"> like </span>
           </button>
         </div>
-      </section>
-      <section class="card">
+      </article>
+      <article class="card">
         <h3 class="card__title">3 спринт: Обходные стратегии</h3>
-        <div class="position__label">
+        <div class="card__label-position">
           <img
-            class="card__image card__image-turn"
+            class="card__image card__image_hue120"
             src="./images/image-turn.png"
             alt="под новым углом"/>
           <label class="card__label"> Поверни меня </label>
@@ -334,7 +334,7 @@
           <p>Как же в этом всем можно разобраться?!</p>
         </div>
         <div class="card__like-position">
-          <button class="card__icon-button">
+          <button type="button" class="card__icon-button" aria-labelledby="like">
             <svg
               width="39"
               height="36"
@@ -362,16 +362,16 @@
                 class="sparks"/>
             </svg>
           </button>
-          <button class="card__like-button">
+          <button id="like" type="button" class="button card__like-button">
             <span class="button__text"> like </span>
           </button>
         </div>
-      </section>
-      <section class="card">
+      </article>
+      <article class="card">
         <h3 class="card__title">3 спринт: Когда опускаются руки</h3>
-        <div class="position__label">
+        <div class="card__label-position">
           <img
-            class="card__image card__image-deadline"
+            class="card__image card__image_grsc07cntr150"
             src="./images/image-deadline.png"
             alt="близкий дедлайн"/>
           <label class="card__label"> Фокус </label>
@@ -387,7 +387,7 @@
           <p>Дедлайн is coming...</p>
         </div>
         <div class="card__like-position">
-          <button class="card__icon-button">
+          <button type="button" class="card__icon-button" aria-labelledby="like">
             <svg
               width="39"
               height="36"
@@ -415,16 +415,16 @@
                 class="sparks"/>
             </svg>
           </button>
-          <button class="card__like-button">
+          <button id="like" type="button" class="button card__like-button">
             <span class="button__text"> like </span>
           </button>
         </div>
-      </section>
-      <section class="card">
+      </article>
+      <article class="card">
         <h3 class="card__title">«Сейчас я здесь»</h3>
-        <div class="position__label">
+        <div class="card__label-position">
           <img
-            class="card__image card__image-win"
+            class="card__image card__image_inv09strt60hue180"
             src="./images/image-win.png"
             alt="победа"/>
           <label class="card__label"> Ура! </label>
@@ -444,7 +444,7 @@
           </p>
         </div>
         <div class="card__like-position">
-          <button class="card__icon-button">
+          <button type="button" class="card__icon-button" aria-labelledby="like">
             <svg
               width="39"
               height="36"
@@ -472,13 +472,13 @@
                 class="sparks"/>
             </svg>
           </button>
-          <button class="card__like-button">
+          <button id="like" type="button" class="button card__like-button">
             <span class="button__text"> like </span>
           </button>
         </div>
-      </section>
+      </article>
       <button
-        class="save__button"
+        class="button save__button"
         type="button"
         onclick="window['dialog-id'].showModal()"
         aria-controls="dialog-id">
@@ -497,8 +497,8 @@
         <button
           type="button"
           onclick="window['dialog-id'].close()"
-          class="pop-up__button">
-          ок
+          class="button pop-up__button">
+          <span class="button__text"> ок </span>
         </button>
       </dialog>
     </main>

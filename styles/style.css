@@ -5,8 +5,8 @@
   align-items: center;
   margin: auto;
   color: var(--accent-color);
-  font-family: var(--font-family__main), sans-serif;
-  font-weight: var(--font-weight__text);
+  font-family: var(--font-family__main);
+  font-variation-settings: 'wght' var(--font-weight__text);
   background-color: var(--bg-color);
   background-image: var(--bg-image);
   background-position: center;
@@ -38,14 +38,14 @@
   padding-bottom: 25px;
 }
 
-.header__title {
-  font-family: var(--font-family__accent), fantasy;
+.header__link {
+  font-family: var(--font-family__accent);
   font-size: var(--font-size__title-L);
   text-transform: uppercase;
 }
 
-.header__subtitle {
-  font-family: var(--font-family__accent), fantasy;
+.header__title {
+  font-family: var(--font-family__accent);
   font-size: var(--font-size__title-M);
   text-transform: uppercase;
 }
@@ -57,24 +57,55 @@
 .theme-menu__list {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 7px;
+}
+
+.theme-menu__item {
+  padding-left: 16px;
 }
 
 .theme-menu__button {
   border: none;
   outline: none;
-  font-family: var(--font-family__accent), fantasy;
+  font-family: var(--font-family__accent);
   font-size: var(--font-size__title-S);
   text-decoration: none;
   text-transform: uppercase;
   background-color: transparent;
+  position: relative;
+  cursor: pointer;
 }
 
 .theme-menu__button:focus {
   border: none;
   outline: none;
   opacity: 0.6;
+}
+
+.theme-menu__button:disabled::before {
+  content: "▶";
+  display: inline-block;
+  position: absolute;
+  left: -18px;
+}
+
+.theme-menu__button:disabled {
+  pointer-events: none;
+}
+
+.theme-menu__button::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 2px;
+  margin-top: 2px;
+  background-color: currentColor;
+}
+
+.theme-menu__button:focus::after {
+  content: '';
+  width: 100%;
 }
 
 .card {
@@ -89,7 +120,7 @@
 .card__title {
   padding: 5px 10px;
   font-family: var(--font-family__main);
-  font-weight: var(--font-weight__title);
+  font-variation-settings: 'wght' var(--font-weight__title);
   font-size: var(--font-size__text);
 }
 
@@ -99,39 +130,39 @@
   object-fit: fill;
 }
 
-.card__image-rocket {
+.card__image_strt40brght130cntr150 {
   filter: saturate(40%) brightness(130%) contrast(150%);
 }
 
-.card__image-start {
-  filter: sepia(60%) brightness(80%); 
+.card__image_sp60brght80 {
+  filter: sepia(60%) brightness(80%);
 }
 
-.card__image-success {
+.card__image_strt500 {
   filter: saturate(500%);
 }
 
-.card__image-ideal {
+.card__image_inv1 {
   filter: invert(1);
 }
 
-.card__image-help {
+.card__image_brght90hue10 {
   filter: brightness(90%) hue-rotate(10deg);
 }
 
-.card__image-turn {
+.card__image_hue120 {
   filter: hue-rotate(120deg);
 }
 
-.card__image-deadline {
+.card__image_grsc07cntr150 {
   filter: grayscale(0.7) contrast(150%);
 }
 
-.card__image-win {
+.card__image_inv09strt60hue180 {
   filter: invert(0.9) saturate(60%) hue-rotate(180deg);
 }
 
-.position__label {
+.card__label-position {
   position: relative;
   aspect-ratio: 1;
 }
@@ -141,7 +172,7 @@
   top: 25px;
   right: 20px;
   display: block;
-  font-family: var(--font-family__accent), fantasy;
+  font-family: var(--font-family__accent);
   font-size: var(--font-size__title-S);
   text-shadow: 
     -1px 0 var(--text-shadow-color), 
@@ -165,7 +196,7 @@
   gap: clamp(1.25rem, 0.657vw + 1.096rem, 1.688rem);
   padding: 25px;
   font-family: var(--font-family__main);
-  font-weight: var(--font-weight__text);
+  font-variation-settings: 'wght' var(--font-weight__text);
   font-size: var(--font-size__text);
 }
 
@@ -182,6 +213,7 @@
   border: none;
   padding: 0;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .card__icon-button:focus {
@@ -209,24 +241,95 @@
   outline: none;
 }
 
+.like-icon .core {
+  fill: transparent;
+}
+
+.like-icon:hover .core {
+  fill: var(--accent-color);
+}
+
+.like-icon:active .core {
+  fill: var(--heart-color);
+}
+
+.like-icon .main-body {
+  fill: transparent;
+}
+
+.like-icon:hover .main-body {
+  fill: var(--accent-color);
+}
+
+.like-icon:active .main-body {
+  fill: var(--heart-color);
+}
+
+.like-icon.is-liked .core {
+  fill: var(--heart-color);
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--heart-color);
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--heart-color);
+}
+
+.like-icon .contour {
+  fill: var(--accent-color);
+}
+
 .sparks {
   opacity: 0;
 }
 
-.card__like-button {
+.button {
   position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
+  border: 1px solid currentColor;
+  overflow: hidden;
+  font-family: var(--font-family__accent);
+  font-size: var(--font-size__title-S);
+  background-color: var(--bg-color);
+  cursor: pointer;
+}
+
+.card__like-button {
+  justify-content: center;
   width: 130px;
   height: 38px;
-  border: 1px solid currentColor;
   padding: 13px 37px;
-  overflow: hidden;
-  font-family: var(--font-family__accent), fantasy;
-  font-size: var(--font-size__title-S);
   text-transform: capitalize;
-  background-color: var(--bg-color);
+}
+
+.button:focus {
+  box-shadow: 2px 2px 0px var(--accent-color);
+  outline: none;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0px var(--accent-color);
+  outline: none;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-color);
+  transform: translateX(-100%);
+}
+
+.button:hover::before {
+  transform: translateX(0);
 }
 
 .button__text {
@@ -237,19 +340,11 @@
 }
 
 .save__button {
-  position: relative;
-  display: flex;
   flex-direction: row;
-  align-items: center;
   gap: 8px;
   width: clamp(19.125rem, 2.723vw + 18.487rem, 20.938rem);
   margin: 0 auto 101px auto;
-  border: 1px solid currentColor;
   padding: 17px;
-  overflow: hidden;
-  font-family: var(--font-family__accent), fantasy;
-  font-size: var(--font-size__title-S);
-  background-color: var(--bg-color);
 }
 
 .floppy-icon {
@@ -290,7 +385,7 @@ dialog::backdrop {
 
 .pop-up__text {
   width: clamp(12.438rem, 3.286vw + 11.667rem, 14.625rem);
-  font-family: var(--font-family__accent), fantasy;
+  font-family: var(--font-family__accent);
   font-size: var(--font-size__title-S);
   line-height: 1.5;
   text-transform: uppercase;
@@ -299,11 +394,8 @@ dialog::backdrop {
 .pop-up__button {
   width: clamp(16.063rem, 3.38vw + 15.27rem, 18.313rem);
   min-height: 38px;
-  border: 2px solid currentColor;
-  font-family: var(--font-family__accent), fantasy;
-  font-size: var(--font-size__title-S);
   text-transform: uppercase;
-  background-color: var(--bg-color);
+  justify-content: center;
 }
 
 @media (width < 376px) {
