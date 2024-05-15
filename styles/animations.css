@@ -15,18 +15,22 @@
 }
 
 @keyframes arrow-shift {
+
   0% {
     translate: 0px;
   }
+
   100% {
     translate: 4px;
   }
 }
 
 @keyframes opacity-changer {
+
   0% {
     opacity: 1;
   }
+
   100% {
     opacity: 0.6;
   }
@@ -60,6 +64,10 @@
   transition: fill 0.3s linear;
 }
 
+.like-icon .contour {
+  transition: fill 0.1s linear;
+}
+
 .like-icon:hover .main-body {
   transition: fill 0.3s 0.05s linear;
 }
@@ -85,14 +93,12 @@
   animation: scaleheart 0.3s ease-in 0.1s 1 alternate none;
 }
 
-.like-icon .contour {
-  transition: fill 0.1s linear;
-}
-
 @keyframes scaleheart {
+
   0% {
     scale: 1;
   }
+
   100% {
     scale: 1.5;
   }
@@ -103,9 +109,11 @@
 }
 
 @keyframes sparks {
+
   0% {
     opacity: 1;
   }
+  
   100% {
     opacity: 0;
   }

@@ -22,7 +22,7 @@
   justify-content: center;
   align-items: center;
   width: var(--card__width);
-  margin: 100px auto 100px auto;
+  margin: 100px auto;
   border: 2px solid currentColor;
   background-color: var(--bg-color);
 }
@@ -183,6 +183,7 @@
 }
 
 @supports((text-stroke: 1px var(--text-shadow-color)) or (-webkit-text-stroke: 1px var(--text-shadow-color))) {
+  
   .card__label {
       text-shadow: none;
       -webkit-text-stroke: 1px var(--text-shadow-color);
@@ -257,6 +258,10 @@
   fill: transparent;
 }
 
+.like-icon .contour {
+  fill: var(--accent-color);
+}
+
 .like-icon:hover .main-body {
   fill: var(--accent-color);
 }
@@ -275,10 +280,6 @@
 
 .like-icon.is-liked .contour {
   fill: var(--heart-color);
-}
-
-.like-icon .contour {
-  fill: var(--accent-color);
 }
 
 .sparks {
@@ -343,7 +344,7 @@
   flex-direction: row;
   gap: 8px;
   width: clamp(19.125rem, 2.723vw + 18.487rem, 20.938rem);
-  margin: 0 auto 101px auto;
+  margin: 0 auto 101px;
   padding: 17px;
 }
 
@@ -399,12 +400,15 @@ dialog::backdrop {
 }
 
 @media (width < 376px) {
+
   .header, .card {
     width: 100%;
   }
+
   .save__button {
     flex-direction: column;
   }
+
   .pop-up[open] {
     margin-top: 375px;
   }

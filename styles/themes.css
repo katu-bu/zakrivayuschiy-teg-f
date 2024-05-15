@@ -16,7 +16,7 @@
   --font-size__title-S: 14px;
   --font-size__text: 18px;
   --contour-color: #000;
-  --heart-color: #ff0000;
+  --heart-color: #f00;
 }
 
 :root.theme-dark {
@@ -37,7 +37,7 @@
   --font-size__title-S: 14px;
   --font-size__text: 18px;
   --contour-color: #00cc14;
-  --heart-color: #ff0000;
+  --heart-color: #f00;
 }
 
 :root.theme-dark .button__text {
@@ -49,6 +49,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
+  
   :root { 
     --font-family__main: 'Inter', sans-serif;
     --font-family__accent: 'PressStart2P', fantasy;
@@ -67,11 +68,13 @@
     --font-size__title-S: 14px;
     --font-size__text: 18px;
     --contour-color: #00cc14;
-    --heart-color: #ff0000;
+    --heart-color: #f00;
   }
+
   .button__text {
     color: var(--accent-color);
   }
+
   .floppy-icon {
     color: var(--accent-color);
   }
